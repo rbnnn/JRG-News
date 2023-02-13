@@ -22,8 +22,11 @@ Gabriel Sutton, Full-Stack Develiper
 ## Tech Stack:
 
 [Python](https://www.python.org/)
+
 [NewsCatcher API](https://newscatcherapi.com/)
+
 [HTML & CSS](https://www.w3.org/standards/webdesign/htmlcss)
+
 [Firebase](https://firebase.google.com/docs)
 
 ## Resources:
