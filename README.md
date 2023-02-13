@@ -10,12 +10,12 @@ We have created this project to provide news that is the most factual and least 
 ## About the Team:
 
 Jaskaran Singh, Front-end Developer  
-&nbsp;Specializes in Information Security  
-&nbsp;Fun Fact: Will commision in May as a 2nd LT in the Army (Signal Branch)  
+&emsp;Specializes in Information Security  
+&emsp;Fun Fact: Will commision in May as a 2nd LT in the Army (Signal Branch)  
 
 Ruben Laureta, Back-end Developer  
-&nbsp;Specializes in Software Engineering  
-&nbsp;Fun Fact: Has more guitars than cats. (He has three cats.)  
+&emsp;Specializes in Software Engineering  
+&emsp;Fun Fact: Has more guitars than cats. (He has three cats.)  
   
 Gabriel Sutton, Full-Stack Develiper
 
@@ -36,8 +36,8 @@ We have relied on these three sites to help us determine which media sources are
 
 ## Upcoming Features
 
-&nbsp;Built-in translator to translate articles  
-&nbsp;Font & Text Size customization  
-&nbsp;Background customization  
+&emsp;Built-in translator to translate articles  
+&emsp;Font & Text Size customization  
+&emsp;Background customization  
 
-&nbsp;E-Mail Newsletter  
+&emsp;E-Mail Newsletter  
