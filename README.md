@@ -17,7 +17,7 @@ Ruben Laureta, Back-end Developer
 &emsp;Specializes in Software Engineering  
 &emsp;Fun Fact: Has more guitars than cats. (He has three cats.)  
   
-Gabriel Sutton, Full-Stack Develiper
+Gabriel Sutton, Full-Stack Develiper  
 &emsp;Specializes in Information Systems and Cybersecurity
 &emsp;Fun Fact: He likes listening to music.
 
