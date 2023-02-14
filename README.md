@@ -42,5 +42,4 @@ We have relied on these three sites to help us determine which media sources are
 &emsp;Built-in translator to translate articles  
 &emsp;Font & Text Size customization  
 &emsp;Background customization  
-
 &emsp;E-Mail Newsletter  
