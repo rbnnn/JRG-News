@@ -25,6 +25,8 @@ Gabriel Sutton, Full-Stack Develiper
 
 [Python](https://www.python.org/)  
 [NewsCatcher API](https://newscatcherapi.com/)  
+[NewsParserAPI](https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/news-parser1)  
+[NodeMailer](https://nodemailer.com/about/)  
 [HTML & CSS](https://www.w3.org/standards/webdesign/htmlcss)  
 [JSON](https://www.json.org/json-en.html)  
 [Firebase](https://firebase.google.com/docs)  
