@@ -1,6 +1,6 @@
-# JRG-News
-A web-based application that provides news articles from unbiased media sources.
-Powered by [NewsCatcher API](https://newscatcherapi.com/). Created as our AU 2023 Capstone.
+# [JRG-News](jrg-news.web.app)  
+A web-based application that provides news articles from unbiased media sources.  
+Powered by [NewsCatcher API](https://newscatcherapi.com/). Hosted by Firebase. Created as our AU 2023 Capstone.
 
 ## Our Goal:
 With our current-day accessibility to information, we all find ourselves reading more and more articles that are opinion-based and full of false information. This alone discourgages us from keeping up with the current events of our world. On top of that, our constant exposure to technology makes reading on our devices becomes an inconvenience. Text that's too small? A background that is too bright? Opinions on top of misinformation? We have decided to do something about it.
@@ -45,3 +45,6 @@ We have relied on these three sites to help us determine which media sources are
 &emsp;Font & Text Size customization  
 &emsp;Background customization  
 &emsp;E-Mail Newsletter  
+
+## Visit our site here:  
+## [JRG-News](jrg-news.web.app)  
