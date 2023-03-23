@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article</title>
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- this styling is for being able to toggle bold/text color. can move to styles when finalized. -->
+  <style>
+    .article {
+      font-weight: normal;
+      color: black;
+    }
+
+    .article.bold {
+      font-weight: bold;
+    }
+
+    /* alternate font colors: */
+    .article.white {
+      color: white;
+    }
+
+    .article.grey {
+      color: grey;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Article</h1>
+
+  <!-- everything to change font, uses js/load.js -->
+  <div class="changeable">
+    <button id="font-size-plus">+</button>
+    <button id="font-size-minus">-</button>
+    <button class="font-weight" id="boldBtn">Bold</button>
+    <!-- still not working 
+      <br>
+    <button id="white-font">White</button>
+	<button id="grey-font">Grey</button>
+  <button id="black-font">White</button>-->
+    <br>
+    <select id="font-select">
+      <option value="Arial">Arial</option>
+      <option value="Helvetica">Helvetica</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Courier New">Courier New</option>
+    </select>
+    <br>
+    <p>Background Color:</p>
+    <button class="back-color" id="color1" data-color="#ffffff"> W </button>
+    <button class="back-color" id="color2" data-color="#f4eac8"> Y </button>
+    <button class="back-color" id="color3" data-color="#808080"> G </button>
+    <button class="back-color" id="color4" data-color="#1f2129"> B </button>
+    <button class="back-color" id="color5" data-color="#000000"> BK </button>
+  </div>
+
+  <!-- area of article MUST be in article class -->
+  <div class="article">Loading...</div>
+
+  <script src="/__/firebase/8.10.1/firebase-app.js"></script>
+  <script src="/__/firebase/8.10.1/firebase-auth.js"></script>
+  <script src="/__/firebase/8.10.1/firebase-firestore.js"></script>
+  <script src="/__/firebase/8.10.1/firebase-functions.js"></script>
+  <!-- initialize SDK after features are loaded-->
+  <script src="/__/firebase/init.js"></script>
+
+  <script src="js/load.js"></script>
+</body>
+
+</html>
