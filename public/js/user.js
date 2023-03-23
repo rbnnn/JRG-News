@@ -101,7 +101,8 @@ window.onload = function () {
     register(data)
         .then((result) => {
             console.log(result);
-            window.location.replace("http://jrg-news.web.app");
+            
+            document.getElementById('newSub').innerHTML = "Subscription success.";
             // Data was successfully written to the Firestore database
         })
         .catch((error) => {
