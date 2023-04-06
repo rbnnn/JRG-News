@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewpoint" content="width=device-width", initial-scale="1.0">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<title>Home</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<header>
+      			<!-- Google Translate -->
+			<div class="google_translate" id="google_translate_element" style="text-align: center;"></div>
+			<script src="https://translate.google.com/translate_a/element.js?
+			cb=googleTranslateElementInit"></script>
+			<script>
+				function googleTranslateElementInit(){
+					new google.translate.TranslateElement(
+						{pageLanguage:'en', layout:google.translate.TranslateElement.InlineLayout.HORIZONTAL},
+						'google_translate_element'
+					);
+				}
+			</script>
+			<div class="website-header">
+				<!-- News Logo -->
+				<img src="images/Logo.jpg">
+				<h1>JRG News</h1>
+				<!-- Social Media Icons-->
+				<div class="social-icons">
+					<i class="fab fa-facebook-f"></i>
+					<i class="fab fa-twitter"></i>
+					<i class="fab fa-google-plus-g"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fas fa-rss"></i>
+				</div>
+				<!-- Have Search Bar Here-->
+				<div class="search-wrapper">
+					<form id="search">
+						<input id="keyword" type="text" placeholder="Search...">
+						<button id="submit-search">Search News</button>
+					  </form>
+				</div>
+			</div>
+			<nav class="navbar navbar-expand-md">
+  <!-- Navbar Section-->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/results.html?topic=politics">POLITICS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/results.html?topic=sport">SPORTS</a>
+      </li> 
+		<li class="nav-item">
+        <a class="nav-link" href="/results.html?topic=entertainment">ENTERTAINMENT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/results.html?topic=business">BUSINESS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/results.html?topic=SCIENCE">SCIENCE</a>
+      </li> 
+		<li class="nav-item">
+        <a class="nav-link" href="/results.html?topic=food">FOOD</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="international.html">INTERNATIONAL</a>
+      </li>
+    </ul>
+  </div> 
+			</nav>
+			<!-- Breaking News Section-->
+			<div class="breaking-news-section">
+				<span id="btext">Breaking News</span>
+				<marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+					<a href="#" class="breaking-news">
+						<p class="bntime">31 Jan 2023</p>
+						Biden to end covid national emergencies in May</a>
+					<a href="#" class="breaking-news"><p class="bntime">31 Jan 2023</p>Western allies differ over jets for Ukraine as Russia claims gains</a>
+					<a href="#" class="breaking-news"><p class="bntime">31 Jan 2023</p>Lakeland shooting leaves 10 injured, suspects at large</a>
+				</marquee>
+			</div>
+		</header>
+        <main>
+    <h1>Update Preferences</h1>
+
+    <!-- this div is required for the form. script: js/user.js -->
+    <div id="update">
+        <form id="subscribe">
+            <h4 id="name">Loading Preferences...</h4>
+            <h4 id="email"></h4>
+
+            <input type="checkbox" id="news" name="news" value="news">
+            <label for="Tech">News</label><br>
+            <input type="checkbox" id="world" name="world" value="world">
+            <label for="Food">World</label><br>
+            <input type="checkbox" id="finance" name="finance" value="finance">
+            <label for="Sports">Finance</label><br>
+
+            <input type="checkbox" id="politics" name="politics" value="politics">
+            <label for="Tech">Politics</label><br>
+            <input type="checkbox" id="business" name="business" value="business">
+            <label for="Food">Business</label><br>
+            <input type="checkbox" id="economics" name="economics" value="economics">
+            <label for="Sports">Economics</label><br>
+
+            <input type="checkbox" id="entertainment" name="entertainment" value="entertainment">
+            <label for="Tech">Entertainment</label><br>
+            <input type="checkbox" id="beauty" name="beauty" value="beauty">
+            <label for="Food">Beauty</label><br>
+            <input type="checkbox" id="travel" name="travel" value="travel">
+            <label for="Sports">Travel</label><br>
+            <input type="checkbox" id="food" name="food" value="food">
+            <label for="Food">Food</label><br>
+            <input type="checkbox" id="music" name="music" value="music">
+            <label for="Tech">Music</label><br>
+            <input type="checkbox" id="tech" name="tech" value="tech">
+            <label for="Tech">Tech</label><br>
+            <input type="checkbox" id="gaming" name="gaming" value="gaming">
+            <label for="Sports">Gaming</label><br>
+            <input type="checkbox" id="sport" name="sport" value="sport">
+            <label for="Sports">Sports</label><br>
+
+            <input type="checkbox" id="science" name="science" value="science">
+            <label for="Food">Science</label><br>
+            <input type="checkbox" id="energy" name="energy" value="energy">
+            <label for="Sports">Energy</label><br>
+
+            <button type="submit" id="submit-button">Update Preferenes</button>
+        </form>
+    </div>
+
+    <script src="/__/firebase/8.10.1/firebase-app.js"></script>
+    <script src="/__/firebase/8.10.1/firebase-auth.js"></script>
+    <script src="/__/firebase/8.10.1/firebase-firestore.js"></script>
+    <script src="/__/firebase/8.10.1/firebase-functions.js"></script>
+    <!-- initialize SDK after features are loaded-->
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="js/user.js"></script>
+        </main>
+        <footer>
+			<div class="social-links">
+				<!-- About Us Section-->
+				<section class="about">
+					<h2>About</h2>
+					<p>The JRG NEWS is a leading online publication that provides readers with up-to-date news, opinion pieces, and in-depth analysis on a range of topics. Our mission is to provide readers with an informed and unbiased source of news and opinion.</p>
+					<div class="social-icons-footer">
+						<i class="fab fa-facebook"></i>
+						<i class="fab fa-twitter-square"></i>
+						<i class="fab fa-google-plus-square"></i>
+						<i class="fab fa-instagram"></i>
+					</div>
+				</section>
+				<!-- Subscription Section -->
+				<section class="Subscribe">
+					<h2>Subscribe to JRG NEWS</h2>
+					<p>Enter your email address to subscribe to this news website and receive notifications of latest news by email.</p>
+					<button type="button" class="footer-buttons"><a class="nav-link" href="/subscribe.html">Subscribe</a></button>         
+          <button type="button" class="footer-buttons"><a class="nav-link" href="/unsubscribe.html">Unsubscribe</a></button>
+				</section>
+			</div>
+			<div class="copyright">Copyright - 2023 JRG News</div>
+		</footer>
+</body>
+
+</html>
