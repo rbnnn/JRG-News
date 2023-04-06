@@ -23,7 +23,7 @@ Gabriel Sutton, Full-Stack Develiper
 
 ## Tech Stack:
 
-[Python](https://www.python.org/)  
+[JavaScript](https://www.javascript.com/)  
 [NewsCatcher API](https://newscatcherapi.com/)  
 [NewsParserAPI](https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/news-parser1)  
 [NodeMailer](https://nodemailer.com/about/)  
