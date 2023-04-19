@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Advanced Search</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+		<!-- Google Translate -->
+		<div class="google_translate" id="google_translate_element" style="text-align: center;"></div>
+		<script src="https://translate.google.com/translate_a/element.js?
+			cb=googleTranslateElementInit"></script>
+		<script>
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement(
+					{ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL },
+					'google_translate_element'
+				);
+			}
+		</script>
+		<div class="website-header">
+			<!-- News Logo -->
+			<img src="images/Logo.jpg">
+			<h1>JRG News</h1>
+			<!-- Social Media Icons-->
+			<div class="social-icons">
+				<i class="fab fa-facebook-f"></i>
+				<i class="fab fa-twitter"></i>
+				<i class="fab fa-google-plus-g"></i>
+				<i class="fab fa-instagram"></i>
+				<i class="fas fa-rss"></i>
+			</div>
+			<!-- Have Search Bar Here-->
+			<div class="search-wrapper">
+				<form id="search">
+					<input id="keyword" type="text" name="keyword" placeholder="Search...">
+					<button id="submit-search">Search News</button>
+					<br><a href="/search.html">Advanced Search</a>
+				</form>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-md">
+			<!-- Navbar Section-->
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">HOME</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=politics">POLITICS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=sport">SPORTS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=entertainment">ENTERTAINMENT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=business">BUSINESS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=SCIENCE">SCIENCE</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=food">FOOD</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="international.html">INTERNATIONAL</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Breaking News Section -->
+			<div class="breaking-news-section">
+				<span id="btext">Breaking News</span>
+				<marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+					<a href="#" class="breaking-news">
+						<p class="bntime">31 Jan 2023</p>
+						Biden to end covid national emergencies in May</a>
+					<a href="#" class="breaking-news"><p class="bntime">31 Jan 2023</p>Western allies differ over jets for Ukraine as Russia claims gains</a>
+					<a href="#" class="breaking-news"><p class="bntime">31 Jan 2023</p>Lakeland shooting leaves 10 injured, suspects at large</a>
+				</marquee>
+			</div>
+	</header>
+  <main>
+    
+    <h1>Advanced Search</h1>
+  <form id="advsearch">
+    <label for="keyword">Keywords</label>
+    <input id="keyword" type="text" name="keyword">
+    <br>
+    <select id="topic" name="topic">
+      <option value="" disabled selected>Topic</option>
+      <option value="news">News</option>
+      <option value="sport">Sports</option>
+      <option value="tech">Tech</option>
+      <option value="world">World</option>
+      <option value="finance">Finance</option>
+      <option value="politics">Politics</option>
+      <option value="business">Business</option>
+      <option value="economics">Economics</option>
+      <option value="entertainment">Entertainment</option>
+      <option value="beauty">Beauty</option>
+      <option value="travel">Travel</option>
+      <option value="music">Music</option>
+      <option value="food">Food</option>
+      <option value="science">Science</option>
+      <option value="gaming">Gaming</option>
+      <option value="energy">Energy</option>
+      
+    </select>
+
+    <br>
+    <select id="search-in" name="search_in">
+      <option value="" disabled selected>Search In</option>
+      <option value="title">Title</option>
+      <option value="summary">Summary</option>
+      <option value="both">Title and Summary</option>
+    </select>
+    <br>
+    <button id="submit-search" type=submit>Search News</button>
+  </form>
+
+    <script src="/__/firebase/8.10.1/firebase-app.js"></script>
+    <script src="/__/firebase/8.10.1/firebase-auth.js"></script>
+    <script src="/__/firebase/8.10.1/firebase-firestore.js"></script>
+    <script src="/__/firebase/8.10.1/firebase-functions.js"></script>
+    <!-- initialize SDK after features are loaded-->
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="js/script.js"></script>
+  </main>
+  <footer>
+		<div class="social-links">
+			<!-- About Us Section-->
+			<section class="about">
+				<h2>About</h2>
+				<p>The JRG NEWS is a leading online publication that provides readers with up-to-date news, opinion
+					pieces, and in-depth analysis on a range of topics. Our mission is to provide readers with an
+					informed and unbiased source of news and opinion.</p>
+				<ul>
+					<li><a href="/about.html">About JRG</a></li>
+					<li><a href="/team.html">Meet the Team</a></li>
+					<li><a href="/contact.html">Contact Us</a></li>
+				</ul>
+			</section>
+			<!-- Subscription Section -->
+			<section class="Subscribe">
+				<h2>Subscribe to JRG NEWS</h2>
+				<p>Enter your email address to subscribe to this news website and receive notifications of latest news
+					by email.</p>
+				<button type="button" class="footer-buttons"><a class="nav-link"
+						href="/subscribe.html">Subscribe</a></button>
+			</section>
+		</div>
+		<div class="copyright">Copyright - 2023 JRG News</div>
+	</footer>
+</body>
+
+</html>

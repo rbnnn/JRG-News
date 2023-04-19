@@ -1,0 +1,70 @@
+// function reference 
+const search = firebase.functions().httpsCallable('search');
+
+function isIterable(input) {
+    return input != null && typeof input[Symbol.iterator] === 'function'
+}
+
+// search function call from firebase
+const button = document.querySelector('.button');
+button.addEventListener('click', (e) => {
+    if (e.target !== e.currentTarget) {
+        var clickedButton = e.target.id;
+
+        /*
+        if (clickedButton == "search") {
+            var query = {};
+            if (document.getElementById('keyword').value != ''){
+                const keyword = '"'+document.getElementById('keyword').value+'"';
+                query.keyword = keyword;
+            };
+            // GOING THROUGH RESULTS
+            search(query).then(result => {
+                const res = result.data;
+                let output = "";
+                if (isIterable(res.articles)){
+                    for(let item of res.articles){
+                        output += `
+                        <div class ="results">
+                            <img src="${item.media}" alt="${item.media}"></a>
+                            <button class = "button" id="load" value = "${item.link}">load article</button>
+                             <p class="title">${item.title}</p>
+                            <p class="excerpt">${item.excerpt}</p>
+                            <p class="published_date">${item.published_date}</p>
+                         </div>
+                        `;
+                    }
+                } else {
+                    output = "No results found.";
+                }
+                document.querySelector(".results").innerHTML = output;
+            })
+        }
+
+        if (clickedButton == "load") {
+            var url = e.target.value;
+            document.querySelector(".article").innerHTML = url;
+        } */
+        console.log(clickedButton);
+    }
+});
+
+
+// submit stuff to database, still trying to initialize that
+const submitForm = document.getElementById('submit');
+submitForm.addEventListener('click', () =>{
+    const formData = Array.from(document.querySelectorAll('#subscribe input')).reduce((acc, input) => ({...acc, [input.id]: input.value}), {});
+
+    // Add a new document in collection "cities"
+    set(ref(db, "users/1"), {
+        name: formData.name,
+        email: formData.email
+    })
+    .then(()=>{
+        alert("added to db")
+    })
+    .catch((error)=>{
+        alert(error);
+    });
+    console.log("submitted");
+});

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Article</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- this styling is for being able to toggle bold/text color. can move to styles when finalized. -->
+  <style media="screen">
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+      z-index: 100;
+    }
+
+    .collapse navbar-collapse {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease-in-out;
+    }
+
+    nav:hover .bottom-part {
+      height: 75px; /* Set the height to the height of your hyperlinks */
+    }
+
+    ul {
+      margin: 20px 0 0 0;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: 10px 20px;
+    }
+
+    hr {
+      width: 80%;
+      background-color: #000000;
+      height: 0.0625em;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <!-- Google Translate -->
+    <div class="google_translate" id="google_translate_element" style="text-align: center;"></div>
+    <script src="https://translate.google.com/translate_a/element.js?
+			cb=googleTranslateElementInit"></script>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL },
+          'google_translate_element'
+        );
+      }
+    </script>
+    <div class="website-header" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding-left: 50px; padding-right: 50px;">
+      <!-- News Logo -->
+      <img src="images/Logo.jpg">
+      <h1>JRG News</h1>
+      <!-- Social Media Icons-->
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-google-plus-g"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fas fa-rss"></i>
+      </div>
+      <!-- Have Search Bar Here-->
+      <div class="search-wrapper">
+				<form id="search">
+					<input id="keyword" type="text" name="keyword" placeholder="Search...">
+					<button id="submit-search">Search News</button>
+					<br><a href="/search.html">Advanced Search</a>
+				</form>
+			</div>
+    </div>
+    <nav class="navbar navbar-expand-md">
+      <!-- Navbar Section-->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/results.html?topic=politics">POLITICS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/results.html?topic=sport">SPORTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/results.html?topic=entertainment">ENTERTAINMENT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/results.html?topic=business">BUSINESS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/results.html?topic=SCIENCE">SCIENCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/results.html?topic=food">FOOD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="international.html">INTERNATIONAL</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Breaking News Section-->
+    <div class="breaking-news-section">
+      <span id="btext">Breaking News</span>
+      <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+        <a href="#" class="breaking-news">
+          <p class="bntime">31 Jan 2023</p>
+          Biden to end covid national emergencies in May
+        </a>
+        <a href="#" class="breaking-news">
+          <p class="bntime">31 Jan 2023</p>Western allies differ over jets for Ukraine as Russia claims gains
+        </a>
+        <a href="#" class="breaking-news">
+          <p class="bntime">31 Jan 2023</p>Lakeland shooting leaves 10 injured, suspects at large
+        </a>
+      </marquee>
+    </div>
+  </header>
+  <main>
+
+    <h1>Article</h1>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="" style="justify-content: space-between; display: flex; flex-wrap: wrap; margin: 50px;">
+      <div class="left" style="padding-left: 30px; padding-right: 30x; width: 50%;">
+        <h1>article title</h1>
+        <h4>author</h4>
+        <div class="" style="justify-content: space-between; display: flex; flex-wrap: wrap; margin-left: 25; margin-right: 25px;">
+          <h4>date</h4>
+          <h4>source</h4>
+        </div>
+      </div>
+      <div class="right">
+        <div class="" style="border-width: 0.0625em; border-style: solid; padding:10px;">
+        <div class="" style="display: flex; flex-wrap: wrap;">
+          <div style="border-right-width: 0.0625em; border-right-style: solid;">
+          <h4 style="text-align: center;">Font Editor:</h4>
+          <div class="" style="display: flex; flex-wrap: wrap; margin-right: 10px;">
+            <select id="font-select">
+              <option value="Arial">Arial</option>
+              <option value="Helvetica">Helvetica</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Baskerville">Baskerville</option>
+              <option value="Courier New">Courier New</option>
+              <option value="Comic Sans MS">Comic Sans MS</option>
+            </select>
+            <button id="font-size-plus">+</button>
+            <button id="font-size-minus">-</button>
+            <button class="font-weight" id="boldBtn">Bold</button>
+          </div>
+          <br>
+          <div class="" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <button id="white-font">White</button>
+            <button id="grey-font">Grey</button>
+            <button id="black-font">Black</button>
+          </div>
+
+          </div>
+          <div style="margin-left: 10px;">
+          <h4 style="text-align: center;">Background Color:</h4>
+          <div class="" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <button class="back-color" id="color1" data-color="#ffffff"> W </button>
+            <button class="back-color" id="color2" data-color="#f4eac8"> Y </button>
+            <button class="back-color" id="color3" data-color="#808080"> G </button>
+            <button class="back-color" id="color4" data-color="#1f2129"> BL </button>
+            <button class="back-color" id="color5" data-color="#000000"> BK </button>
+          </div>
+          </div>
+          <br>
+        </div>
+        <div style="text-align: center;">
+          <br>
+          <button class="reset-all" id="reset" data-color="#ffffff">Reset All</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="" style="display: flex; flex-wrap: wrap; margin-top: 50px; margin-left: 150px; margin-right: 150px">
+      <img src="https://cdn.shortpixel.ai/spai/w_1003+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/2021/02/musk_doge_snip.jpg" alt="" style="width: 100px;">
+      <p style="margin: 25px;">article words go here</p>
+    </div>
+
+    <!-- area of article MUST be in article class -->
+    <div class="article">Loading...</div>
+
+    <script src="/__/firebase/8.10.1/firebase-app.js"></script>
+    <script src="/__/firebase/8.10.1/firebase-auth.js"></script>
+    <script src="/__/firebase/8.10.1/firebase-firestore.js"></script>
+    <script src="/__/firebase/8.10.1/firebase-functions.js"></script>
+    <!-- initialize SDK after features are loaded-->
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/load.js"></script>
+  </main>
+  <footer>
+		<div class="social-links">
+			<!-- About Us Section-->
+			<section class="about">
+				<h2>About</h2>
+				<p>The JRG NEWS is a leading online publication that provides readers with up-to-date news, opinion
+					pieces, and in-depth analysis on a range of topics. Our mission is to provide readers with an
+					informed and unbiased source of news and opinion.</p>
+				<ul>
+					<li><a href="/about.html">About JRG</a></li>
+					<li><a href="/team.html">Meet the Team</a></li>
+					<li><a href="/contact.html">Contact Us</a></li>
+				</ul>
+			</section>
+			<!-- Subscription Section -->
+			<section class="Subscribe">
+				<h2>Subscribe to JRG NEWS</h2>
+				<p>Enter your email address to subscribe to this news website and receive notifications of latest news
+					by email.</p>
+				<button type="button" class="footer-buttons"><a class="nav-link"
+						href="/subscribe.html">Subscribe</a></button>
+			</section>
+		</div>
+		<div class="copyright">Copyright - 2023 JRG News</div>
+	</footer>
+</body>
+
+</html>
