@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>Article</title>
-  <!-- stylesheets -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
   <!-- this styling is for being able to toggle bold/text color. can move to styles when finalized. -->
   <style>
-    .article {
-      font-weight: normal;
-      color: black;
-    }
-
     .article.bold {
       font-weight: bold;
     }
@@ -27,42 +26,222 @@
       color: grey;
     }
 
+    .article {
+      font-weight: normal;
+      color: black;
+    }
+
+    #link,
+    #text.bold,
+    #header1.bold,
+    #header2.bold {
+      font-weight: bold;
+    }
+
+    /* alternate font colors: */
+    #link,
+    #text.white,
+    #header1.white,
+    #header2.white {
+      color: white;
+    }
+
+    #link,
+    #text.grey,
+    #header1.grey,
+    #header2.grey {
+      color: grey;
+    }
+
+    #link,
+    #text,
+    #header1,
+    #header2 {
+      font-weight: normal;
+      color: black;
+    }
   </style>
 
 </head>
 
 <body>
+  <header>
+    <nav class="hide">
+			<!-- Google Translate -->
+			<div class="google_translate" id="google_translate_element" style="text-align: right; margin-right: 10;">
+			</div>
+			<script src="https://translate.google.com/translate_a/element.js?
+				cb=googleTranslateElementInit"></script>
+			<script>
+				function googleTranslateElementInit() {
+					new google.translate.TranslateElement(
+						{ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL },
+						'google_translate_element'
+					);
+				}
+			</script>
+			<div class="top-part" style="text-align: center; justify-content: center;  border-bottom-width: 0.1025em; border-bottom-style: solid; border-color: #edd8b9;">
+				<a href="/index.html" style="text-decoration: none;">
+					<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+						<img src="images/logo.png" style="height: 50px;">
+					</div>
+				</a>
+				<form id="search" style="margin-top: 20px; width: 25%; margin-left:auto; margin-right: auto;">
+					<input id="keyword" type="text" name="keyword" placeholder="Search..." style="margin-bottom: 5px;">
+					<br><a href="/search.html" style="margin-bottom: 15px;">Advanced Search</a>
+				</form>
+				<br>
+				<i class="fa fa-angle-down" style="font-size:24px; position: absolute; margin:0 auto;"></i>
+			</div>
 
-  <h1>Article</h1>
-
-  <!-- everything to change font, uses js/load.js -->
-  <div class="changeable">
-    <button id="font-size-plus">+</button>
-    <button id="font-size-minus">-</button>
-    <button class="font-weight" id="boldBtn">Bold</button>
-    <!-- still not working 
-      <br>
-    <button id="white-font">White</button>
-	<button id="grey-font">Grey</button>
-  <button id="black-font">White</button>-->
+			<div class="bottom-part" style="text-align: center;">
+				<ul class="navbar-nav" style="display: inline;">
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=news">NEWS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=politics">POLITICS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=business">BUSINESS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=finance">FINANCE</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=economics">ECONOMICS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=world">WORLD</a>
+					</li>		
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=travel">TRAVEL</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=food">FOOD</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=beauty">BEAUTY</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=entertainment">ENTERTAINMENT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=sport">SPORTS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=tech">TECH</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=gaming">GAMING</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=science">SCIENCE</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=energy">ENERGY</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+  </header>
+  <main>
+    <br><br><br>
+    <br><br><br>
     <br>
-    <select id="font-select">
-      <option value="Arial">Arial</option>
-      <option value="Helvetica">Helvetica</option>
-      <option value="Times New Roman">Times New Roman</option>
-      <option value="Courier New">Courier New</option>
-    </select>
-    <br>
-    <p>Background Color:</p>
-    <button class="back-color" id="color1" data-color="#ffffff"> W </button>
-    <button class="back-color" id="color2" data-color="#f4eac8"> Y </button>
-    <button class="back-color" id="color3" data-color="#808080"> G </button>
-    <button class="back-color" id="color4" data-color="#1f2129"> B </button>
-    <button class="back-color" id="color5" data-color="#000000"> BK </button>
-  </div>
+    <br><br><br>
 
-  <!-- area of article MUST be in article class -->
-  <div class="article">Loading...</div>
+    <div class="content">
+      <!-- everything to change font, uses js/load.js -->
+      <div class="article" style="margin: 0 auto; width: 80%;">
+        <h1 id="title">Loading...</h1>
+        <h4 id="author"></h4>
+        <div class="info" style="justify-content: space-between; display: flex; flex-wrap: wrap;">
+          <p id="date"></p>
+          <p id="source"></p>
+        </div>
+      </div>
+      <hr style="width: 80%;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <div style="border-right-width: 0.0625em; border-right-style: solid; border-color: #edd8b9;">
+          <h4 id="header1" style="text-align: center;">Font Editor:</h4>
+          <div class=""
+            style="display: flex; flex-wrap: wrap; margin-right: 10px; margin-bottom: 10px; justify-content: space-around;">
+            <select id="font-select"
+              style="border: 1px solid #ccc; padding: 3px; border-radius: 4px; font-size: large;">
+              <option value="Arial">Arial</option>
+              <option value="Helvetica">Helvetica</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Baskerville">Baskerville</option>
+              <option value="Courier New">Courier New</option>
+              <option value="Comic Sans MS">Comic Sans MS</option>
+            </select>
+            <button id="font-size-plus">+</button>
+            <button id="font-size-minus">-</button>
+            <button class="font-weight" id="boldBtn">Bold</button>
+          </div>
+
+          <div class="" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <button id="white-font">White</button>
+            <button id="grey-font">Grey</button>
+            <button id="black-font">Black</button>
+          </div>
+
+        </div>
+        <div class="article" style="margin-left: 10px; justify-content: center;">
+          <h4 id="header2" style="text-align: center;">Background Color:</h4>
+          <div class="" style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 10px;">
+            <button class="back-color" id="color1" data-color="#ffffff"> W </button>
+            <button class="back-color" id="color2" data-color="#f4eac8"> Y </button>
+            <button class="back-color" id="color3" data-color="#808080"> G </button>
+            <button class="back-color" id="color4" data-color="#1f2129"> BL </button>
+            <button class="back-color" id="color5" data-color="#000000"> BK </button>
+          </div>
+          <button class="reset-all" id="reset" data-color="#ffffff">Reset All</button>
+        </div>
+        <br>
+      </div>
+    <hr style="width: 80%;">
+      <div class="article" style="margin: 50px;">
+        <img id="img" src="" style=" width:30%; float: left; margin-right: 30px; margin-bottom: 30px;">
+        <p id="text"  align="left">Please wait one moment...</p>
+      </div>
+
+      <!-- area of article MUST be in article class -->
+    </div>
+    <br><br><br>
+
+  </main>
+
+  <footer>
+    <div class="other-links">
+      <!-- About Us Section-->
+      <section class="about">
+        <h2>Info</h2>
+        <p>The JRG NEWS is a leading online publication that provides readers with up-to-date news, opinion
+          pieces, and in-depth analysis on a range of topics. Our mission is to provide readers with an
+          informed and unbiased source of news and opinion.</p>
+        <ul>
+          <li><a href="/about.html">About JRG</a></li>
+          <li><a href="/team.html">Meet the Team</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </section>
+      <!-- Subscription Section -->
+      <section class="Subscribe">
+        <h2>Subscribe to JRG NEWS</h2>
+        <p>Come join our newsletter to recieve the latest unbiased and reliable news every week! Newsletters will be
+          curated to your personal interests.</p>
+        <button type="button" class="footer-buttons"><a class="sub-link" href="/subscribe.html">Subscribe</a></button>
+        <p>*Newsletters are sent on a weekly basis. You may update your preferences or Unsubscribe at any time.
+        </p>
+
+      </section>
+    </div>
+    <div class="copyright">Copyright - 2023 JRG News</div>
+  </footer>
 
   <script src="/__/firebase/8.10.1/firebase-app.js"></script>
   <script src="/__/firebase/8.10.1/firebase-auth.js"></script>
@@ -71,6 +250,7 @@
   <!-- initialize SDK after features are loaded-->
   <script src="/__/firebase/init.js"></script>
 
+  <script src="js/script.js"></script>
   <script src="js/load.js"></script>
 </body>
 

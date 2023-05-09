@@ -1,32 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Search Results</title>
-  <!-- stylesheets -->
-  <link rel="stylesheet" href="css/styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width" , initial-scale="1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Results</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+	<header>
+		<nav class="hide">
+			<!-- Google Translate -->
+			<div class="google_translate" id="google_translate_element" style="text-align: right; margin-right: 10;">
+			</div>
+			<script src="https://translate.google.com/translate_a/element.js?
+				cb=googleTranslateElementInit"></script>
+			<script>
+				function googleTranslateElementInit() {
+					new google.translate.TranslateElement(
+						{ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL },
+						'google_translate_element'
+					);
+				}
+			</script>
+			<div class="top-part" style="text-align: center; justify-content: center;  border-bottom-width: 0.1025em; border-bottom-style: solid; border-color: #edd8b9;">
+				<a href="/index.html" style="text-decoration: none;">
+					<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+						<img src="images/logo.png" style="height: 50px;">
+					</div>
+				</a>
+				<form id="search" style="margin-top: 20px; width: 25%; margin-left:auto; margin-right: auto;">
+					<input id="keyword" type="text" name="keyword" placeholder="Search..." style="margin-bottom: 5px;">
+					<br><a href="/search.html" style="margin-bottom: 15px;">Advanced Search</a>
+				</form>
+				<br>
+				<i class="fa fa-angle-down" style="font-size:24px; position: absolute; margin:0 auto;"></i>
+			</div>
 
-  <h1 id="headline">Results</h1>
+			<div class="bottom-part" style="text-align: center;">
+				<ul class="navbar-nav" style="display: inline;">
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=news">NEWS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=politics">POLITICS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=business">BUSINESS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=finance">FINANCE</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=economics">ECONOMICS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=world">WORLD</a>
+					</li>		
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=travel">TRAVEL</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=food">FOOD</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=beauty">BEAUTY</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=entertainment">ENTERTAINMENT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=sport">SPORTS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=tech">TECH</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=gaming">GAMING</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=science">SCIENCE</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=energy">ENERGY</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<br><br><br>
+		<br><br><br>
+		<br><br><br>
+		<br>
 
-  <div class="results">Loading...</div>
+		<h1 id="headline" style="text-align: center;">Results</h1>
+		<hr style="width: 75%">
 
-  <button id="next">Next Page</button>
+		<br>
+		<div style="justify-content: end; display: flex; flex-wrap: wrap;">
+			<select id="sort-by" style="margin-right: 15px; border: 1px solid #ccc; padding: 3px; border-radius: 4px; font-size: large;">
+				<option value="" disabled selected>Sort By</option>
+				<option value="relevancy">Relevancy</option>
+				<option value="date">Published Date</option>
+			</select>
 
+			<select id="page-size"
+				style="margin-right: 30px; border: 1px solid #ccc; padding: 3px; border-radius: 4px; font-size: large;">
+				<option value="" disabled selected>Articles Per Page</option>
+				<option value="10">10</option>
+				<option value="25">25</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</select>
+		</div>
+		<br>
 
-  </div>
-  <script src="/__/firebase/8.10.1/firebase-app.js"></script>
-  <script src="/__/firebase/8.10.1/firebase-auth.js"></script>
-  <script src="/__/firebase/8.10.1/firebase-firestore.js"></script>
-  <script src="/__/firebase/8.10.1/firebase-functions.js"></script>
-  <!-- initialize SDK after features are loaded-->
-  <script src="/__/firebase/init.js"></script>
+		<div class="results" style="text-align: center;">Loading...</div>
 
-  <script src="js/search.js"></script>
+		<br><br>
+		<div style="justify-content: right; display: flex; flex-wrap: wrap;">
+			<button id="next" style="margin: 30px; background-color: #708ca8;
+			padding: 3px 8px 3px 8px;
+			font-size: larger;
+			border: none;
+			color: whitesmoke;
+			border-radius: 4px;
+			cursor: pointer;
+			float: right;">Next Page
+			<i class="fas fa-angle-right" style="color: whitesmoke;"></i></button>
+			</i>
+		</div>
+
+		<br>
+	</main>
+
+	<footer>
+		<div class="other-links">
+			<!-- About Us Section-->
+			<section class="about">
+				<h2>Info</h2>
+				<p>The JRG NEWS is a leading online publication that provides readers with up-to-date news, opinion
+					pieces, and in-depth analysis on a range of topics. Our mission is to provide readers with an
+					informed and unbiased source of news and opinion.</p>
+				<ul>
+					<li><a href="/about.html">About JRG</a></li>
+					<li><a href="/team.html">Meet the Team</a></li>
+					<li><a href="/contact.html">Contact Us</a></li>
+				</ul>
+			</section>
+			<!-- Subscription Section -->
+			<section class="Subscribe">
+				<h2>Subscribe to JRG NEWS</h2>
+				<p>Come join our newsletter to recieve the latest unbiased and reliable news every week! Newsletters will be curated to your personal interests.</p>
+				<button type="button" class="footer-buttons"><a class="sub-link"
+						href="/subscribe.html">Subscribe</a></button>
+				<p>*Newsletters are sent on a weekly basis. You may update your preferences or Unsubscribe at any time.
+				</p>
+
+			</section>
+		</div>
+		<div class="copyright">Copyright - 2023 JRG News</div>
+	</footer>
+
+	<script src="/__/firebase/8.10.1/firebase-app.js"></script>
+	<script src="/__/firebase/8.10.1/firebase-auth.js"></script>
+	<script src="/__/firebase/8.10.1/firebase-firestore.js"></script>
+	<script src="/__/firebase/8.10.1/firebase-functions.js"></script>
+	<!-- initialize SDK after features are loaded-->
+	<script src="/__/firebase/init.js"></script>
+
+	<script src="js/script.js"></script>
+	<script src="js/search.js"></script>
 </body>
 
 </html>

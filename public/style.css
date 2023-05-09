@@ -1,299 +1,326 @@
-body{
+body {
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-}
-header{	
-	background-color: black;
-	color: white;
-}
-.website-header{
-	padding: 20px;
-	height: 80px;
-	display: flex;
-	flex-wrap: wrap;
-}
-.website-header img{
-	float: left;
-	width: 50px;
-	height: 50px;	
-	margin: 0 30px;
-}
-.website-header h1{
-	margin: auto 0;
-}
-.social-icons{
-	text-align: right;
-	flex-grow: 1;
-}
-.social-icons i{
-	margin: 0 7px;
-	cursor: pointer;
-}
-nav{
-	background-color: black;
-	height: 50px;
-	margin-bottom: 20px;
-}
-nav ul{
-	margin: 20px 0 0 0;
-}
-.navbar-nav li{
-	list-style: none;
-	display: inline-block;
-	padding: 10px 20px;
-}
-.navbar-nav li a{
-	color: #fff;
-	text-decoration: none;
-	font-size: 20px;
-	text-transform: uppercase;
-	font-weight: 800;
-}
-.navbar-nav li a:hover{
-	color:#e08b6c;
-}
-.breaking-news-section{
-	padding: 0 30px 0 60px;
-	display: flex;
-	background-color: rgba(255,255,255,0.2);
-}
-#btext{
-	width: 200px;
-	font-size: 16px;
-	text-transform: uppercase;
-	color:#e08b6c;
-	font-weight: 600;
-	margin: auto 0;
-}
-.breaking-news{
-	padding: 30px;
-	color: #fff;
-	text-decoration: none;	
-	font-weight: 800;
-}
-.breaking-news:hover,.social-icons i:hover{
-	color:#e08b6c;
-	cursor: pointer;
-}
-.bntime{
-	display: inline-block;
-	color: rgba(255,255,255,0.5);
-	padding: 0 10px;
-	font-size: 12px;
-}
-#popular-news{
-	display: flex;
-	flex-wrap: wrap;
-	margin: 30px 5%;
-}
-#popular-news h2{
-	margin: 0;
-	padding: 5px;
-	color: #fff;
-}
-#featured h2{
-	background-color: black;
-}
-#featured{
-	flex: 2;
-}
-#popular-news img{
-	width: 100%;
-	filter: brightness(0.7);
-	transition-duration: 500ms;
-}
-.carousel, .news-container{
-	position: relative;
-}
-.carousel-text{
-	position: absolute;
-	word-wrap: normal;
-	bottom: 5px;
-	z-index: 2;
-	color: #fff;
-	font-size: 24px;
-	font-weight: bolder;
-	padding: 0 10px;
-	transition-duration: 500ms;
-}
-.news-container .carousel-text{
-	font-size: 18px;
-}
-.carousel-date{
-	display: block;
-	text-align: center;
-	font-size: 14px;
-	color: rgba(255,255,255,0.7);
-	font-weight: 300;
-}
-section{
-	cursor: pointer;
-}
-.news-container:hover > .carousel-text{
-	bottom: 10px;
-}
-.news-container:hover > img{
-	filter: brightness(0.4);
-}
-.more-news{
-	background-color: black;
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0 5%;
-	justify-content: space-between;
-	color: #fff;
-}
-.news-section{
-	display: flex;
-	flex-wrap: wrap;
-	flex-basis: 70%;
-	justify-content: space-between;
-}
-.international h2{	
-	background-color: #b2175b;
-}
-.sport h2{
-	background-color: #3c1b75;
-}
-.international h2, .sport h2{
-    margin: 10px 0 0 0;
-	padding: 0 10px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	background-color: #fefaef;
+	height: 100%;
 }
 
-.more-news img{
-	width: 100%;
-	height: 250px;
+header {
+	background-color: #fefaef;
+	color: black;
 }
-.international,.sport{
-	flex-basis: 45%;
+
+a {
+	color: black;
+	text-decoration: none;
 }
-aside{
-	width: 90%;
-	padding: 10px;
-	flex-basis: 25%;
-	border: 1px solid #fff;
-	border-radius: 5px;
-	margin: auto 0;
+
+p {
+	text-align: left;
 }
-p{
-	text-align: justify;
+
+.sub-link {
+	color: whitesmoke;
+	text-decoration: none;
 }
-.recent-news{
-	display: flex;
+
+.sub-link:hover {
+	color: whitesmoke;
+	text-decoration: none;
 }
-.recent-news img{
-	width: 70px;
-	height: 70px; 
-	margin: 10px;
-}
-.recent-news p{
-	font-size: 14px;
-	font-weight: bold;
-	margin: auto;
-}
-.social-links{
-	display: flex;
-	flex-wrap: wrap;
-	padding: 5%;
-	justify-content: space-between;
-}
-.social-links section{
-	flex-basis: 30%;
-}
-.social-icons-footer i{
-	font-size: 37px;
-	padding: 5px;
-}
-.instagram img{
-	padding: 5px;
-}
-.footer-buttons{
+
+.footer-buttons {
 	display: block;
-	border: 1px solid #2196f3;
-	color: #2196f3;
+	border: 1px solid #a87070;
+	border-radius: 5px;
+	color: white;
 	font-size: 14px;
 	font-weight: bolder;
-	background-color: white;
+	background-color: #a87070;
 	margin: 20px auto;
 	padding: 10px 20px;
 	cursor: pointer;
 }
-.footer-buttons:hover{
+
+.footer-buttons:hover {
 	color: #fff;
-	border: 1px solid #fff;
-	background-color: #2196f3;
+	border: 1px solid #1f1f1f;
+	background-color: #1f1f1f;
 }
-.copyright{
+
+.copyright {
 	width: 100%;
 	background-color: black;
 	color: #fff;
 	padding: 5px;
 	text-align: center;
 }
-.results{
-	display: grid;
-	grid-template-columns: repeat(auot-fit, minmax(350px, auto));
-	grid-gap: 50px;
-	margin: 50px auto;
-	max-width: 1000px;
-	padding: 20px;
+
+.other-links {
+	background-color: #e6d4be;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 2% 5% 2% 5%;
+	justify-content: space-between;
+	margin-top: 20px;
+	flex-basis: 100%;
 }
 
-.results{
-	padding: 10px;
-	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.results img{
-	width: 70%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-.results .title{
-	text-align: center;
-	font-size: 20px;
-}
-.results .excerpt{
-	text-align: center;
-	font-size: 15px;
+.other-links section {
+	flex-basis: 30%;
 }
 
 @media only screen and (max-width: 600px) {
-	.breaking-news-section{	
-		padding: 10px;
-		flex-wrap: wrap;
-	}
-	#featured{
-		flex: auto;
-	}	
-	.news-section, aside, .news-section article,.social-links section{
-		flex-basis: 100%;		
-	}
-	aside{
-		border-width: 0;
-	}
-	.social-links section{
+
+	.other-links {
 		margin-top: 20px;
+		flex-basis: 100%;
 	}
-	.website-header img{
+
+	.top-part img {
 		width: 35px;
 		height: 35px;
 		padding: 5px;
 	}
-	.website-header h1{
+
+	.top-part h1 {
 		font-size: 15px;
 	}
-	.social-icons{
-		flex-basis: 100%;
+
+	nav:hover .fa-angle-down {
+		transform: translate(0, 140px) rotate(180deg);
 	}
-	.navbar-collapse{
-		background-color: black;
-		z-index: 16;
-	}
-	.navbar-toggler-icon{
-		background-image: url(images/menu.jpg);
-		z-index: 16;
-	}
+
 }
+
+nav.hidden {
+	transform: translateY(-100%);
+  }
+  
+  nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #fefaef;
+	z-index: 100;
+	transition: transform 0.5s ease-in-out;
+  }
+  
+  .top-part {
+	/* Styles for the top part of the navbar */
+  }
+  
+  .bottom-part {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    background-color: #e6d4be;
+}
+
+nav:hover .bottom-part {
+    max-height: 200px; /* Set the maximum height you want to transition to */
+    transition: max-height 0.5s ease-in-out;
+}
+  
+  nav ul {
+	margin: 20px 0 0 0;
+	display: inline;
+  }
+  
+  nav li {
+	list-style: none;
+	display: inline-block;
+	padding: 10px 20px;
+  }
+  
+
+  .fa-angle-down {
+    transition: transform 0.3s ease-in-out;
+	color: #e6d4be;
+}
+
+
+nav:hover .fa-angle-down {
+    transform: translate(0, 70px) rotate(180deg);
+}
+
+/* for forms */
+#name,
+#email,
+#message,
+#topic,
+#search-in,
+#keyword {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: vertical;
+}
+
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+
+#submit-button, #submit-advsearch {
+	margin-top: 10px;
+	background-color: whitesmoke;
+	color: black;
+	/*font-weight: bold;*/
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+
+#submit-button:hover, #submit-advsearch:hover {
+	background-color: #70a882;
+	color: whitesmoke;
+}
+
+img {
+	border-radius: 4px;
+}
+
+#feedback,
+#newSub,
+#update,
+#advancedSearch {
+	color: whitesmoke;
+	border-radius: 10px;
+	background-color: #708ca8;
+	padding: 20px 30px 20px 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.col-25 {
+	text-align: left;
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+
+.col-75 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/* This stuff is for the article's page to display the button colors, fonts and whatnot */
+#color1 {
+	background-color: #ffffff;
+	border: none;
+}
+
+#color2 {
+	background-color: #f4eac8;
+	border: none;
+}
+
+#color3 {
+	background-color: #808080;
+	border: none;
+}
+
+#color4 {
+	background-color: #060c21;
+	border: none;
+	color: #ffffff;
+}
+
+#color5 {
+	background-color: #000000;
+	border: none;
+	color: #ffffff;
+}
+
+#font-select {
+	font-size: 16px;
+	/* adjust as needed */
+	font-family: Arial, sans-serif;
+	/* fallback font */
+}
+
+#font-select option[value="Arial"] {
+	font-family: Arial, sans-serif;
+}
+
+#font-select option[value="Helvetica"] {
+	font-family: Helvetica, sans-serif;
+}
+
+#font-select option[value="Verdana"] {
+	font-family: Verdana, sans-serif;
+}
+
+#font-select option[value="Times New Roman"] {
+	font-family: "Times New Roman", serif;
+}
+
+#font-select option[value="Georgia"] {
+	font-family: Georgia, serif;
+}
+
+#font-select option[value="Comic Sans MS"] {
+	font-family: "Comic Sans MS", cursive;
+}
+
+#font-select option[value="Courier New"] {
+	font-family: "Courier New", monospace;
+}
+
+#font-select option[value="Baskerville"] {
+	font-family: Baskerville, serif;
+}
+
+hr {
+	width: 80%;
+	background-color: #edd8b9;
+	height: 0.0625em;
+}
+
+
+#search input {
+        width: 100%;
+        padding: 12px 24px;
+
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 18px;
+        
+        color: #575756;
+        background-color: transparent;
+/*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+ 
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 95% center;
+        border-radius: 50px;
+        border: 1px solid #575756;
+        transition: all 250ms ease-in-out;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+	#search input:hover,
+	#search input:focus {
+		padding: 12px 0;
+		outline: 0;
+		border: 1px solid transparent;
+		background-color: transparent;
+		border-bottom: 1px solid #575756;
+		border-radius: 0;
+		background-position: 100% center;
+	}

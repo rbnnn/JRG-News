@@ -1,33 +1,44 @@
-// references to our functions
+// References to our functions
 const register = firebase.functions().httpsCallable('register');
 const unsubscribe = firebase.functions().httpsCallable('unsubscribe');
 const current = firebase.functions().httpsCallable('getPreferences');
-const updatePref = firebase.functions().httpsCallable('udpatePreferences');
+const updatePref = firebase.functions().httpsCallable('updatePreferences');
 
-// retrieving user ID from url
+// Retrieving user ID from url
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get('id')
 
 window.onload = function () {
-    // if unsubscribe page is loaded
+    // If unsubscribe page is loaded
     if (document.getElementById('unsub')) {
-        // calling unsubscribe function, id is parameter passed
+        // Calling unsubscribe function, id is parameter passed
         unsubscribe({ userid: id })
             .then((result) => {
                 console.log(result);
-                // message for unsubscribe
-                document.querySelector(".message").innerHTML = "Unsubscribed from Newsletter.";
+                // Message for unsubscribe
+                document.querySelector(".message").innerHTML = "Success.";
+                alert("Unsubscribe success. You have been unsubscribed from JRG News.");
             })
             .catch((error) => {
                 console.error(error);
-                // message for error
-                document.querySelector(".message").innerHTML = "Unable to unsubscribe from newsletter.";
+                // Message for error
+                document.querySelector(".message").innerHTML = "Error.";
+                alert("Something went wrong. Please try again.");
             });
 
-    // if preferences page is loaded        
+        // If preferences page is loaded        
     } else if (document.getElementById('update')) {
-        //get current preferences
+        const selectAllCheckbox = document.getElementById("select-all");
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(#select-all)');
+
+        selectAllCheckbox.addEventListener("change", function () {
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = selectAllCheckbox.checked;
+            });
+        });
+
+        // Get current preferences
         current({ userid: id })
             .then((result) => {
                 const data = result.data;
@@ -35,7 +46,7 @@ window.onload = function () {
                 document.getElementById("name").innerHTML = data.name;
                 document.getElementById("email").innerHTML = data.email;
 
-                // pre-checking our form to show user what preferences they have 
+                // Pre-checking our form to show user what preferences they have 
                 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
                 for (const checkbox of checkboxes) {
                     if (topics.includes(checkbox.value)) {
@@ -44,71 +55,145 @@ window.onload = function () {
                 }
             })
             .catch((error) => {
-                // couldn't get data
+                // Couldn't get data
                 document.getElementById("name").innerHTML = "Unable to retrieve data";
             });
 
-        console.log(data);
-
-        // lilstener for submitting the preference form
+        // Listener for submitting the preference form
         document.getElementById('submit-button').addEventListener('click', (event) => {
             event.preventDefault();
-
-            console.log("clicked")
+            document.getElementById('submit-button').innerText = "Working...";
+            console.log("submit pressed")
 
             const checkboxes = document.querySelectorAll('input[type="checkbox"]');
             const newtopics = [];
 
-            // retrieving which topics are checked
+            // Retrieving which topics are checked
             checkboxes.forEach((checkbox) => {
-                if (checkbox.checked) {
+                if (checkbox.checked && checkbox.id !== 'select-all') {
                     newtopics.push(checkbox.value);
                 }
             });
 
-            // calling update function, passing user ID & function data
+            if (!validateCheckbox()) {
+                alert("Please select at least one topic.");
+                document.getElementById('submit-button').innerText = "Subscribe to Newsletter";
+                return;
+            }
+
+            console.log("new preferences: " + newtopics)
+
+            // Calling update function, passing user ID & function data
             updatePref({ userid: id, newData: { topics: newtopics } })
                 .then((result) => {
                     console.log("Preferences updated.", result);
+                    document.getElementById('submit-button').innerText = "Update Preferences";
+                    alert("Update success. Your new preferences have been saved.");
                 })
                 .catch((error) => {
                     console.error("Preferences not updated.", error);
+                    document.getElementById('submit-button').innerText = "Update Preferences";
+                    alert("Updating preferences could not be completed, please try again.");
                 });
+
+            // Checks which checkboxes are checked and then added to an array
+            function validateCheckbox() {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                let isChecked = false;
+
+                checkboxes.forEach((checkbox) => {
+                    if (checkbox.checked) {
+                        isChecked = true;
+                    }
+                });
+
+                return isChecked;
+            }
         });
 
-    // if on subscription page
-    } else if (document.getElementById('newSub')){
-    // Add an event listener for the subscription form
-    // will be moved to another page
-    document.getElementById('submit-button').addEventListener('click', (event) => {
-    event.preventDefault();
+        // If on subscription page
+    } else if (document.getElementById('newSub')) {
+        const selectAllCheckbox = document.getElementById("select-all");
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(#select-all)');
 
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const topics = [];
+        // When select all is selected, all boxes are checked/unchecked
+        selectAllCheckbox.addEventListener("change", function () {
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = selectAllCheckbox.checked;
+            });
+        });
 
-    checkboxes.forEach((checkbox) => {
-        if (checkbox.checked) {
-            topics.push(checkbox.value);
+        // Add an event listener for the subscription form
+        document.getElementById('submit-button').addEventListener('click', (event) => {
+
+            try {
+                event.preventDefault();
+
+                document.getElementById('submit-button').innerText = "Working...";
+
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                const topics = [];
+
+                // Makes sure not to push select-all
+                checkboxes.forEach((checkbox) => {
+                    if (checkbox.checked && checkbox.id !== 'select-all') {
+                        topics.push(checkbox.value);
+                    }
+                });
+
+                // Get the data from your HTML form
+                const name = document.getElementById('name').value;
+
+                // Checks for empty entries and returns errors/alerts
+                if (name == "") {
+                    throw new Error("Please enter your name.");
+                }
+
+                const email = document.getElementById('email').value;
+
+                if (email == "") {
+                    throw new Error("Please enter your email.");
+                }
+
+                if (!validateCheckbox()) {
+                    throw new Error("Please select at least one topic.");
+                }
+
+                const data = { name: name, email: email, topics: topics }
+                // Call your Firebase Cloud Function and pass in the form data
+                register(data)
+                    .then((result) => {
+                        console.log(result);
+                        document.getElementById('submit-button').innerText = "Subscribe to Newsletter";
+                        alert("Subscription success!");
+                        // Data was successfully written
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                        document.getElementById('submit-button').innerText = "Subscribe to Newsletter";
+                        alert(error);
+                        // There was an error writing data
+                    });
+
+            } catch (e) {
+                alert(e.message);
+                document.getElementById('submit-button').innerText = "Subscribe to Newsletter";
+            }
+
+        });
+
+        // Checks which checkboxes are checked and then added to an array
+        function validateCheckbox() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            let isChecked = false;
+
+            checkboxes.forEach((checkbox) => {
+                if (checkbox.checked) {
+                    isChecked = true;
+                }
+            });
+
+            return isChecked;
         }
-    });
-
-    // Get the data from your HTML form
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-
-    const data = { name: name, email: email, topics: topics }
-    // Call your Firebase Cloud Function and pass in the form data
-    register(data)
-        .then((result) => {
-            console.log(result);
-            
-            document.getElementById('newSub').innerHTML = "Subscription success.";
-            // Data was successfully written to the Firestore database
-        })
-        .catch((error) => {
-            console.error(error);
-            // There was an error writing data to the Firestore database
-        });
-});
     }
 };

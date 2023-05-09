@@ -1,72 +1,180 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home</title>
-  <!-- stylesheets -->
-  <link rel="stylesheet" href="css/styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width" , initial-scale="1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>JRG News</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-  <nav>
-    <div class="top-part">
-      <!-- Logo and other content for the top part of the navbar -->
-      <img src="images/Logo.jpg">
-      <h1>JRG News</h1>
-    </div>
-    <div class="bottom-part">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/search.html">Advanced Search</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/subscribe.html">Subscribe to Newsletter</a>
-        <li class="nav-item">
-          <a class="nav-link" href="/results.html?topic=politics">POLITICS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/results.html?topic=sport">SPORTS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/results.html?topic=entertainment">ENTERTAINMENT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/results.html?topic=business">BUSINESS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/results.html?topic=SCIENCE">SCIENCE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/results.html?topic=food">FOOD</a>
-        </li>
-        
-        </li>
-      </ul>
-    </div>
-  </nav>
+	<header>
+		<nav class="hide">
+			<!-- Google Translate -->
+			<div class="google_translate" id="google_translate_element" style="text-align: right; margin-right: 10;">
+			</div>
+			<script src="https://translate.google.com/translate_a/element.js?
+				cb=googleTranslateElementInit"></script>
+			<script>
+				function googleTranslateElementInit() {
+					new google.translate.TranslateElement(
+						{ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL },
+						'google_translate_element'
+					);
+				}
+			</script>
+			<div class="top-part" style="text-align: center; justify-content: center;  border-bottom-width: 0.1025em; border-bottom-style: solid; border-color: #edd8b9;">
+				<a href="/index.html" style="text-decoration: none;">
+					<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+						<img src="images/logo.png" style="height: 50px;">
+					</div>
+				</a>
+				<form id="search" style="margin-top: 20px; width: 25%; margin-left:auto; margin-right: auto;">
+					<input id="keyword" type="text" name="keyword" placeholder="Search..." style="margin-bottom: 5px;">
+					<br><a href="/search.html" style="margin-bottom: 15px;">Advanced Search</a>
+				</form>
+				<br>
+				<i class="fa fa-angle-down" style="font-size:24px; position: absolute; margin:0 auto;"></i>
+			</div>
 
-  <!-- script: js/script.js -->
-  <h1>Search</h1>
-  <form id="search">
-    <label for="keyword">Keywords</label>
-    <input id="keyword" type="text">
-    <button id="submit-search">Search News</button>
-  </form>
+			<div class="bottom-part" style="text-align: center;">
+				<ul class="navbar-nav" style="display: inline;">
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=news">NEWS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=politics">POLITICS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=business">BUSINESS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=finance">FINANCE</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=economics">ECONOMICS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=world">WORLD</a>
+					</li>		
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=travel">TRAVEL</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=food">FOOD</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=beauty">BEAUTY</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=entertainment">ENTERTAINMENT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=sport">SPORTS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=tech">TECH</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=gaming">GAMING</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=science">SCIENCE</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/results.html?topic=energy">ENERGY</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<br><br><br>
+		<br><br><br>
+		<br><br><br>
+		<br>
 
-  <br>
-  <br>
+		<div id="latest">
+			<div class="" style="justify-content: center; display: flex; flex-wrap: wrap; margin: 25px;">
+				<div id="1" onclick=""
+					style="padding: 30px; width: 55%; border-right-width: 0.0625em; border-right-style: solid; border-color: #edd8b9;">
+				</div>
+				<div class="" style="justify-content: left; display: flex; flex-wrap: wrap; width: 30%;">
+					<div id="2" style="padding: 30px;">
+					</div>
+					<hr style="width: 100%">
+					<div id="3" style="padding: 30px;">
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="" style="justify-content: center; display: flex; flex-wrap: wrap; margin: 25px">
+				<div id="4" onclick="" style="padding: 30px; width: 25%; ">
+				</div>
+				<div id="5" onclick=""
+					style="padding: 30px; border-left-width: 0.0625em; border-left-style: solid;  width: 25%; border-color: #edd8b9;">
+				</div>
+				<div id="6" onclick=""
+					style="padding: 30px; border-left-width: 0.0625em; border-left-style: solid;  width: 25%;border-color: #edd8b9; ">
+				</div>
+			</div>
+			<hr>
+			<div class="" style="justify-content: center; display: flex; flex-wrap: wrap; margin: 25px;">
+				<div class="" style=" width: 30%;">
+					<div id="7" onclick="" style="padding: 30px;">
+					</div>
+					<hr style="width: 100%">
+					<div id="8" onclick="" style="padding: 30px;">
+					</div>
+				</div>
+				<div id="9" onclick=""
+					style="padding: 30px; border-left-width: 0.0625em; border-left-style: solid;  width: 55%; border-color: #edd8b9;">
+				</div>
+			</div>
 
-  <script src="/__/firebase/8.10.1/firebase-app.js"></script>
-  <script src="/__/firebase/8.10.1/firebase-auth.js"></script>
-  <script src="/__/firebase/8.10.1/firebase-firestore.js"></script>
-  <script src="/__/firebase/8.10.1/firebase-functions.js"></script>
-  <!-- initialize SDK after features are loaded-->
-  <script src="/__/firebase/init.js"></script>
+			<br><br><br>
 
-  <script src="js/script.js"></script>
-  <script src="js/user.js"></script>
+	</main>
+	<footer>
+		<div class="other-links">
+			<!-- About Us Section-->
+			<section class="about">
+				<h2>Info</h2>
+				<p>The JRG NEWS is a leading online publication that provides readers with up-to-date news, opinion
+					pieces, and in-depth analysis on a range of topics. Our mission is to provide readers with an
+					informed and unbiased source of news and opinion.</p>
+				<ul>
+					<li><a href="/about.html">About JRG</a></li>
+					<li><a href="/team.html">Meet the Team</a></li>
+					<li><a href="/contact.html">Contact Us</a></li>
+				</ul>
+			</section>
+			<!-- Subscription Section -->
+			<section class="Subscribe">
+				<h2>Subscribe to JRG NEWS</h2>
+				<p>Come join our newsletter to recieve the latest unbiased and reliable news every week! Newsletters will be curated to your personal interests.</p>
+				<button type="button" class="footer-buttons"><a class="sub-link"
+						href="/subscribe.html">Subscribe</a></button>
+				<p>*Newsletters are sent on a weekly basis. You may update your preferences or Unsubscribe at any time.
+				</p>
+
+			</section>
+		</div>
+		<div class="copyright">Copyright - 2023 JRG News</div>
+	</footer>
+	<script src="/__/firebase/8.10.1/firebase-app.js"></script>
+	<script src="/__/firebase/8.10.1/firebase-auth.js"></script>
+	<script src="/__/firebase/8.10.1/firebase-firestore.js"></script>
+	<script src="/__/firebase/8.10.1/firebase-functions.js"></script>
+	<!-- initialize SDK after features are loaded-->
+	<script src="/__/firebase/init.js"></script>
+
+	<script src="js/script.js"></script>
 </body>
 
 </html>
